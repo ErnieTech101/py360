@@ -1,0 +1,29 @@
+# PY360 - Python/360 MVS OS Mainframe Simulator
+# Git ignore file
+
+# Runtime generated files
+catalog.json
+
+# User data directories (created at runtime)
+users/
+spool/
+datasets/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
