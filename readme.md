@@ -1,10 +1,10 @@
-# PY360 - Python/360 MVS OS Mainframe Simulator
+# PY/360 - Python-based MVSj IBM S/360 Mainframe Simulator
 
 ![PY360 Logo Screen](screenshots/logo.png)
 
-> *"Because some of us remember"*
+> *"Because some of us remember our days with Heavy Iron"*
 
-PY360 is a Python-based simulation of the IBM MVS mainframe environment for Windows 10/11. It is not an emulator — it does not run real mainframe code or require mainframe software licenses. Instead, PY360 recreates the **look, feel, and workflow** of working on an IBM MVS system, making mainframe concepts accessible to anyone curious enough to try it.
+PY360 is a Python-based simulation of the IBM S/360 MVSj mainframe environment for Windows 10/11. It is not an emulator — it does not run real mainframe code or require mainframe software licenses. Instead, PY360 recreates the **look, feel, and workflow** of working on an IBM MVS system, making mainframe concepts accessible to anyone curious enough to try it.
 
 ---
 
@@ -32,14 +32,14 @@ For output, the **IBM 1403 chain printer** was the workhorse of the data center.
 
 Finally, tying the human operator to all of this machinery was the **IBM 3270 terminal** — a sleek, green-phosphor display device that connected to the mainframe over coaxial cable. The 3270 was a pure display terminal, sending keystrokes to the mainframe and receiving screen updates in return. It was through the 3270 that operators managed the system, users ran their TSO sessions, and ISPF presented its now legendary full-screen panels.
 
-PY360 simulates all of these components in software, running entirely on a standard Windows PC.
+PY360 simulates all of these components in software, running entirely on a standard Windows 10/11 PC.
 
 ---
 
 ## Features
 
 - **Authentic 3270-style terminal** — Custom tkinter window with green phosphor display, OIA status line, and period-correct fonts
-- **IPL boot sequence** — Type `IPL 201` to initiate system startup with real host hardware interrogation via psutil and WMI
+- **IPL boot sequence** — Type `IPL` to initiate system startup with real host hardware interrogation via psutil and WMI
 - **TSO/ISPF simulation** — Full primary option menu with system information panel
 - **ISPF-style editor** — Full screen editor with line commands (D, I, R, C, M, A, B) and primary commands (FIND, CHANGE, SAVE)
 - **ISPF browse** — Read-only dataset viewer with search and scroll
@@ -113,11 +113,11 @@ That's it! On first run PY360 will automatically create all required directories
 ## Quick Start
 
 1. Run `python py360.py` from a Windows Command Prompt
-2. At the blinking cursor, type `IPL 201` and press ENTER
+2. At the blinking cursor, type `IPL` and press ENTER
 3. Watch the IPL sequence initialize the system
 4. The terminal window will open at the login screen
-5. Enter any USERID (e.g. `DAVE`) and press TAB
-6. Enter any PASSWORD and press ENTER
+5. Enter any USERID (e.g. `JOHN01`) and press TAB - Any USERID that does not already exist will be created
+6. Enter any PASSWORD and press ENTER - password security is not implemented for simplicity
 7. You are now at the ISPF Primary Option Menu
 
 **Try these first:**
@@ -286,22 +286,23 @@ PY360 supports a practical JCL subset:
 
 ## Acknowledgements
 
-PY360 was developed in collaboration with **Claude** (claude.ai), Anthropic's AI assistant. This project represents an extended pair-programming session where Claude contributed substantially to the architecture, code, and documentation throughout the development process.
+PY360 was developed in collaboration with **Claude** (claude.ai), Anthropic's AI assistant. This project represents an extended pair-programming session where Claude contributed substantially to the architecture and code throughout the development process.
 
-The author believes in transparency about AI collaboration in software development. Rather than presenting AI-assisted work as purely human-authored, this project acknowledges that the boundaries between human creativity and AI assistance are increasingly intertwined — and that's something worth celebrating rather than obscuring.
+The author believes in transparency about AI collaboration in software development. Rather than presenting AI-assisted work as purely human-authored, this project acknowledges that the boundaries between human creativity and AI assistance are increasingly intertwined — and that's something worth celebrating rather than obscuring. 
 
-**Human contributions:**
+**ErnieTech's Human contributions:**
 - Project concept, vision and direction
 - Mainframe domain expertise and authenticity guidance
-- Design decisions and feature priorities
+- Design decisions, feature priorities and future vision
 - Testing, debugging feedback and quality control
+- Documentation and help text with Claude's accuracy and consistency checking
 - The enthusiasm that kept the project moving! 😄
 
 **Claude's contributions:**
 - Architecture design and module structure
 - Python implementation across all modules
 - Problem solving and debugging
-- Documentation and help text
+- Assistance with documentation and help text
 - General coding partnership
 
 If you find PY360 useful, consider exploring what's possible with AI-assisted development at [claude.ai](https://claude.ai) and supporting [Anthropic's mission](https://www.anthropic.com) to develop AI safely and beneficially.
