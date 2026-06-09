@@ -1,0 +1,24 @@
+PY360 - SPOOL VIEWER HELP
+==========================
+
+The spool viewer displays output from batch jobs
+and BASIC programs run in foreground mode.
+
+SPOOL FILES
+-----------
+  PRT001  Main printer output  (spool\printout.txt)
+  PCH001  Card punch output    (spool\punch.txt)
+
+NAVIGATION
+----------
+  F3 / ESC  Exit spool viewer
+  F7 / PgUp Scroll up
+  F8 / PgDn Scroll down
+  FIND str  Search for string
+
+COMMANDS
+--------
+  TOP       Jump to top of spool
+  BOTTOM    Jump to bottom of spool
+  PURGE     Clear the spool file
+  PRINT     Send spool to printer

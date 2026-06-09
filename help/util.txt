@@ -1,0 +1,28 @@
+PY360 - UTILITIES HELP
+=======================
+
+Dataset utility functions allow you to manage your
+PY360 datasets from within the system.
+
+AVAILABLE UTILITIES
+-------------------
+  1  LISTCAT    List all datasets in catalog
+  2  ALLOCATE   Create a new dataset
+  3  DELETE     Delete an existing dataset
+  4  RENAME     Rename a dataset
+  5  COPY       Copy one dataset to another
+  6  LISTDS     Display dataset details
+
+DATASET NAMING RULES
+--------------------
+  Datasets follow IBM DSN conventions:
+  - Maximum 44 characters total
+  - Dot-separated qualifiers
+  - Each qualifier 1-8 characters
+  - Must start with a letter
+  - Example: USER.DAVE.SOURCE
+
+DEFAULT PREFIX
+--------------
+  Your default prefix is set in your user profile.
+  LISTCAT will filter by your prefix automatically.

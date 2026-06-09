@@ -1,0 +1,36 @@
+PY360 - LOGIN HELP
+===================
+
+The PY360 login screen authenticates users and
+loads their personal profile settings.
+
+LOGIN PROCEDURE
+---------------
+  1. Type your USERID and press TAB or ENTER
+  2. Type your PASSWORD and press ENTER
+  3. Your profile will be loaded automatically
+
+NEW USERS
+---------
+  If your USERID is not found in the system,
+  a new profile will be created automatically
+  with default settings.
+
+USER PROFILE
+------------
+  Your profile is stored as:
+    users\userid.json
+
+  Profile contains:
+    USERID      Your user identifier
+    PREFIX      Default dataset prefix
+    LASTLOGIN   Last login timestamp
+    LRECL       Default record length
+    RECFM       Default record format
+    SCROLLMODE  Default scroll mode
+
+PASSWORD
+--------
+  Passwords are not validated in PY360.
+  This is a single-user simulation system.
+  Any password will be accepted.

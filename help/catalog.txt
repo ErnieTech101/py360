@@ -1,0 +1,27 @@
+PY360 - CATALOG HELP
+=====================
+
+The PY360 catalog tracks all allocated datasets.
+It is stored as catalog.json in the PY360 root directory.
+
+CATALOG ENTRIES
+---------------
+  Each dataset entry contains:
+    DSN      Dataset name
+    PATH     Physical file location
+    RECFM    Record format (FB, F, V, VB)
+    LRECL    Logical record length
+    CREATED  Creation date
+    DESC     Description
+
+RECFM VALUES
+------------
+  FB   Fixed Block (most common, default)
+  F    Fixed Unblocked
+  V    Variable
+  VB   Variable Block
+
+LRECL
+-----
+  Logical record length in bytes.
+  Default is 80 (standard mainframe card image).

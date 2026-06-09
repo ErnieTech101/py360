@@ -1,0 +1,44 @@
+PY360 - EDITOR HELP
+====================
+
+The PY360 editor provides ISPF-style full screen editing.
+
+SCREEN LAYOUT
+-------------
+  Row 1   : Title bar - dataset name and position
+  Row 2   : COMMAND ===> field for primary commands
+  Row 3   : TOP OF DATA marker
+  Rows 4+ : Data lines with line numbers
+  Last row: BOTTOM OF DATA marker
+  OIA     : Status line at very bottom
+
+NAVIGATION
+----------
+  TAB       Cycle between COMMAND, line number, and text areas
+  Arrow keys Move cursor
+  PgUp/F7   Scroll up one page
+  PgDn/F8   Scroll down one page
+  F3        Save and exit
+  F4        Exit without saving
+
+PRIMARY COMMANDS (type at COMMAND ===> then ENTER)
+--------------------------------------------------
+  SAVE      Save the file
+  CANCEL    Exit without saving
+  END       Save and exit
+  FIND str  Find string (case insensitive)
+  CHANGE s1 s2  Change first occurrence of s1 to s2
+  UP n      Scroll up n lines
+  DOWN n    Scroll down n lines
+
+LINE COMMANDS (type in line number area then ENTER)
+---------------------------------------------------
+  D         Delete line
+  I         Insert blank line below
+  R         Repeat line
+  C         Copy line (then use A or B to paste)
+  M         Move line (then use A or B to paste)
+  A         Paste after this line
+  B         Paste before this line
+  CC...CC   Copy block of lines
+  MM...MM   Move block of lines

@@ -1,0 +1,338 @@
+PY360 CONCEPT GLOSSARY
+======================
+A Reference Guide to Mainframe and MVS Terminology
+Python/360 MVS OS Mainframe Simulator V1.0
+----------------------------------------------------------------------
+Use FIND <term> to locate a specific entry.
+Terms are listed alphabetically.
+----------------------------------------------------------------------
+
+1403 PRINTER
+  The IBM 1403 chain printer, introduced with the System/360 in 1964.
+  Capable of printing up to 1,100 lines per minute, it was the
+  workhorse output device of the mainframe era. Output was produced
+  on wide greenbar paper (132 columns). In PY360, the 1403 is
+  simulated by routing SYSOUT to the spool\printout.txt file.
+  The distinctive sound of the 1403 chain printer was one of the
+  most recognizable sounds of any data center of the era.
+
+3270 TERMINAL
+  The IBM 3270 family of display terminals, introduced in 1971.
+  Connected to mainframes via coaxial cable, the 3270 was a
+  block-mode terminal - meaning keystrokes were buffered locally
+  and sent to the host only when ENTER or a PF key was pressed.
+  The Model 2 variant offered an 80x24 character display with
+  a distinctive green phosphor screen. PY360 simulates the Model 2
+  3270 experience using a custom tkinter terminal window.
+
+ABENDral
+  ABnormal END. An abend occurs when a program terminates
+  unexpectedly due to an error condition. On MVS, abends produce
+  a condition code of 8 or higher and may generate a system dump
+  for diagnostic purposes. In PY360, a REXX program that encounters
+  a fatal error returns RC=12.
+
+ASA CARRIAGE CONTROL
+  American Standards Association carriage control characters used
+  in mainframe printer output. The first character of each print
+  line controls vertical spacing:
+    ' ' (space) - Single space before printing
+    '0'         - Double space before printing
+    '-'         - Triple space before printing
+    '1'         - Skip to top of new page
+  PY360 honors ASA carriage control in spool output formatting.
+
+BATCH PROCESSING
+  The execution of predefined jobs without user interaction.
+  Jobs are submitted to JES2 via JCL, queued, executed in order,
+  and their output routed to the spool. Batch processing was the
+  dominant computing model before interactive terminals became
+  common. On real MVS systems, batch jobs could run overnight
+  while operators monitored progress from the master console.
+  In PY360, batch jobs are submitted from menu option 5 BATCH.
+
+CATALOG
+  A directory of all datasets known to the system, storing their
+  names, locations, and attributes. On real MVS, the system catalog
+  (SYSCATLG) was a VSAM dataset. In PY360, the catalog is stored
+  as catalog.json in the PY360 root directory, mapping DSNs to
+  their physical file paths on the Windows host system.
+
+CLASS
+  In JCL, the CLASS parameter on the JOB statement defines the
+  job class, which determined which initiators could process the
+  job. Different classes had different priorities and resource
+  limits. Common classes were A through Z. In PY360 the CLASS
+  parameter is accepted but not enforced.
+
+CONDITION CODE (CC)
+  A numeric value returned by a program or job step indicating
+  its completion status. Standard values:
+    0    - Successful completion
+    4    - Warning - completed with minor issues
+    8    - Error - completed with significant issues
+    12   - Severe error
+    16   - Terminal error - job should not continue
+  In JCL, subsequent steps can test the condition code of prior
+  steps and execute conditionally.
+
+CONSOLE
+  The master operator console, used to monitor and control the
+  MVS system. Operators entered commands and received system
+  messages at the console. In PY360, the Windows CMD window
+  serves as the operator console during IPL.
+
+DASD
+  Direct Access Storage Device. The mainframe equivalent of a
+  hard drive, allowing any record to be accessed directly without
+  reading through preceding records. Early DASD units like the
+  IBM 2314 and 3330 were large cabinet-sized devices. DASD volumes
+  are identified by a six-character VOLSER (volume serial number).
+  In PY360, DASD is simulated by the datasets\ directory structure.
+
+DATA CONTROL BLOCK (DCB)
+  A control block describing the physical characteristics of a
+  dataset, including record format (RECFM), logical record length
+  (LRECL), and block size (BLKSIZE). DCB parameters are specified
+  in JCL DD statements and stored in the dataset catalog.
+
+DATASET (DSN)
+  A named collection of related data stored on DASD, equivalent
+  to a file in modern computing. Dataset names follow strict IBM
+  conventions: dot-separated qualifiers, each 1-8 characters,
+  maximum 44 characters total, starting with an alpha character.
+  Example: USER.DAVE.SOURCE
+  In PY360, datasets are stored as text files under the datasets\
+  directory, with the DSN structure mirrored in the folder hierarchy.
+
+DD STATEMENT
+  Data Definition statement in JCL. Defines a dataset used by
+  a job step, associating a logical name (ddname) with a physical
+  dataset or output destination. Common DD parameters:
+    DSN=    - Dataset name
+    DISP=   - Disposition (SHR, OLD, NEW, MOD)
+    SYSOUT= - Route output to spool (SYSOUT=*)
+  Example: //SYSIN DD DSN=USER.DAVE.MYPROG,DISP=SHR
+
+DISP
+  Disposition parameter in a JCL DD statement. Specifies how the
+  dataset should be treated at the start and end of the job step:
+    SHR  - Dataset exists, shared access
+    OLD  - Dataset exists, exclusive access
+    NEW  - Dataset is newly created
+    MOD  - Extend an existing dataset
+  In PY360, DISP is accepted in JCL but SHR and OLD are treated
+  identically since PY360 is single-user.
+
+DSN
+  See DATASET.
+
+EXEC STATEMENT
+  The JCL statement that identifies the program or cataloged
+  procedure to be executed in a job step.
+  Example: //STEP1 EXEC PGM=REXXRUN
+  In PY360, supported PGMs are:
+    REXXRUN  - Execute a REXX program
+    IEFBR14  - IBM null program (does nothing)
+
+IEFBR14
+  A famous IBM utility program consisting of just two machine
+  instructions that immediately return control to the system.
+  Used in JCL to allocate or delete datasets via DD statements
+  without actually running any program logic. A staple of
+  mainframe culture and humor - every mainframe programmer knows
+  IEFBR14. In PY360, IEFBR14 is supported as a null step.
+
+INITIATOR
+  A JES2 address space that reads jobs from the input queue and
+  executes them. Multiple initiators allow multiple jobs to run
+  concurrently. Each initiator is assigned job classes it will
+  process. PY360 simulates two initiators in its IPL messages.
+
+IPL
+  Initial Program Load. The mainframe equivalent of booting a
+  computer. During IPL, the nucleus (operating system kernel)
+  is loaded from DASD into memory, devices are brought online,
+  and subsystems like JES2 are started. On real systems, IPL
+  required specifying the DASD address containing the nucleus.
+  In PY360, IPL is initiated by typing IPL 201 at the boot prompt.
+
+ISPF
+  Interactive System Productivity Facility. IBM's full-screen
+  menu-driven interface for MVS, providing editors, file managers,
+  and utilities through a consistent panel-based interface. ISPF
+  became the standard way users interacted with MVS systems.
+  PY360 simulates ISPF's look and feel including the primary
+  option menu, editor, browse, and utility functions.
+
+JCL
+  Job Control Language. The scripting language used to submit
+  batch jobs on MVS systems. JCL statements begin with //
+  and define the job, its steps, and the datasets used.
+  JCL was notorious for its rigid syntax and cryptic error
+  messages - a rite of passage for every mainframe programmer.
+  PY360 supports a practical subset of JCL sufficient for
+  running REXX programs in batch mode.
+
+JES2
+  Job Entry Subsystem 2. The IBM subsystem responsible for
+  receiving jobs, scheduling them for execution, managing the
+  spool, and distributing output. JES2 messages begin with
+  $HASP (named after the Houston Automatic Spooling Priority
+  system from which it descended). In PY360, JES2 is simulated
+  by the jcl.py and spool.py modules.
+
+JOB STATEMENT
+  The first JCL statement in a job, identifying the job and
+  specifying its processing requirements.
+  Example: //MYJOB JOB (ACCT),'PROGRAMMER',CLASS=A,MSGCLASS=A
+  Parameters:
+    jobname  - 1-8 character job identifier
+    acct     - Account information (positional)
+    CLASS    - Job class
+    MSGCLASS - Output class for job log messages
+
+LRECL
+  Logical Record Length. The length in bytes of each logical
+  record in a dataset. For fixed-length records (RECFM=FB),
+  all records are exactly LRECL bytes. The standard mainframe
+  LRECL of 80 reflects the 80-column punched card.
+  PY360 defaults to LRECL=80 for all new datasets.
+
+MEMBER
+  A named component within a Partitioned Dataset (PDS). Members
+  allow multiple programs or data items to be stored within a
+  single dataset, similar to files within a folder. Members are
+  referenced using parenthetical notation:
+  USER.DAVE.SOURCE(MYPROG)
+  PY360 plans to support PDS members in a future release.
+
+MSGCLASS
+  The output class for JCL job log messages. Determines where
+  JES2 routes the job's system messages and JCL listing.
+  In PY360, all job messages go to the printer spool regardless
+  of MSGCLASS.
+
+MVS
+  Multiple Virtual Storage. IBM's flagship mainframe operating
+  system, introduced in 1974 as an evolution of OS/360. MVS
+  provided each program with its own virtual address space,
+  greatly simplifying memory management. MVS evolved through
+  MVS/XA, MVS/ESA, OS/390, and eventually z/OS, which runs
+  on IBM mainframes today.
+
+NUCLEUS
+  The core of the MVS operating system, loaded into memory
+  during IPL. The nucleus contains the fundamental supervisor
+  routines that manage the system. During IPL the message
+  IEA101I indicates nucleus loading is complete.
+
+OIA
+  Operator Information Area. The status line at the bottom of
+  a 3270 terminal display, showing system status, cursor position,
+  insert mode, and connection information. PY360 simulates the
+  OIA with a status bar showing system name, userid, time, and
+  cursor position.
+
+PDS
+  Partitioned Dataset. A dataset organized as a directory of
+  named members, similar to a folder containing files. PDS
+  datasets were used extensively for storing programs, JCL
+  procedures, and source code. See also MEMBER.
+
+PF KEYS
+  Program Function keys. The 3270 terminal had 12 or 24 PF keys
+  (also called function keys) that sent predefined commands to
+  the host application. ISPF standardized PF key assignments:
+    F1  = HELP
+    F3  = END/EXIT
+    F7  = UP (scroll back)
+    F8  = DOWN (scroll forward)
+    F10 = LEFT
+    F11 = RIGHT
+  PY360 supports F1 through F12 with ISPF-standard assignments.
+
+READY
+  The TSO command prompt, displayed when a user is logged on
+  to TSO but not running an application. At the READY prompt,
+  users can enter TSO commands or start applications like ISPF.
+  In PY360, the READY prompt appears after logging off from ISPF,
+  allowing LOGON, APPLS, or SHUTDOWN commands.
+
+RECFM
+  Record Format. Defines how records are organized within a
+  dataset:
+    F   - Fixed length, unblocked
+    FB  - Fixed length, Blocked (most common)
+    V   - Variable length, unblocked
+    VB  - Variable length, Blocked
+  PY360 defaults to RECFM=FB for all new datasets.
+
+REXX
+  Restructured Extended Executor. A powerful, easy-to-learn
+  scripting language developed by IBM's Mike Cowlishaw in 1979.
+  REXX became the standard scripting language for MVS and VM
+  systems, valued for its clean syntax and powerful string
+  handling. PY360 includes a REXX interpreter supporting
+  variables, loops, conditionals, and built-in functions.
+
+SMF
+  System Management Facility. The MVS component responsible for
+  collecting system activity data for accounting, performance
+  monitoring, and capacity planning. SMF records were written
+  to a dedicated dataset and processed by reporting programs.
+
+SPOOL
+  Simultaneous Peripheral Operations OnLine. A technique where
+  output destined for slow devices like printers is written to
+  fast DASD first, then printed later. JES2 manages the MVS
+  spool. In PY360, the spool is simulated by files in the
+  spool\ directory, viewable from menu option 6 SPOOL.
+
+STEP
+  A unit of work within a JCL job, defined by an EXEC statement.
+  A job may contain multiple steps executed sequentially. Each
+  step runs one program and has its own set of DD statements.
+  Steps produce condition codes that subsequent steps can test.
+
+SYSIN
+  A DD name conventionally used for a program's primary input.
+  In PY360 JCL, SYSIN points to the REXX program dataset that
+  REXXRUN will execute.
+
+SYSOUT
+  A DD name conventionally used for a program's primary output,
+  routed to the spool via SYSOUT=*. In PY360, SYSOUT output
+  is written to the printer spool file.
+
+SYSPLEX
+  A group of MVS systems that cooperate as a single computing
+  resource, sharing workload and data. Introduced with MVS/ESA
+  in the early 1990s. In PY360, the SYSPLEX name is defined
+  in PY360.cfg and displayed during IPL.
+
+TSO
+  Time Sharing Option. The MVS subsystem providing interactive
+  terminal access to the system. TSO allowed multiple users to
+  share the mainframe simultaneously, each receiving a portion
+  of system resources. ISPF ran as a TSO application.
+  PY360 simulates the TSO environment including the READY prompt.
+
+VOLSER
+  Volume Serial number. A six-character identifier assigned to
+  each DASD volume, used to locate datasets across multiple
+  disk drives. Typical volsers reflected their purpose:
+  SYSVOL, USRVOL, WORK01, etc. In PY360, volumes are defined
+  in PY360.cfg and simulated by subdirectories.
+
+VSAM
+  Virtual Storage Access Method. IBM's advanced file management
+  system supporting keyed sequential (KSDS), entry-sequenced
+  (ESDS), and relative-record (RRDS) datasets. VSAM was used
+  for the system catalog and many application databases.
+  VSAM support is planned for a future PY360 release.
+
+----------------------------------------------------------------------
+End of PY360 Concept Glossary
+For additional help type HELP at any COMMAND ===> prompt
+----------------------------------------------------------------------

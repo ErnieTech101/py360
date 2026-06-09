@@ -1,0 +1,35 @@
+PY360 - BASIC INTERPRETER HELP
+================================
+
+PY360 BASIC is a line-numbered BASIC interpreter
+built into PY360 for writing and running simple programs.
+
+PROGRAM STRUCTURE
+-----------------
+  Programs consist of numbered lines.
+  Line numbers must be in ascending order.
+  Example:
+    10 REM My first PY360 BASIC program
+    20 PRINT "Hello from PY360!"
+    30 END
+
+KEYWORDS
+--------
+  LET       Assign a value:  LET X = 10
+  PRINT     Display output:  PRINT "Hello"
+  INPUT     Get user input:  INPUT X
+  IF/THEN   Conditional:     IF X > 10 THEN GOTO 100
+  GOTO      Jump to line:    GOTO 200
+  GOSUB     Call subroutine: GOSUB 500
+  RETURN    Return from sub: RETURN
+  FOR/NEXT  Loop:            FOR I = 1 TO 10
+  REM       Comment:         REM This is a comment
+  END       End program:     END
+  STOP      Stop execution:  STOP
+  PRINT     Print to spool:  PRINT #1, "text"
+
+RUNNING A PROGRAM
+-----------------
+  From the menu select option 4 FOREGROUND
+  Enter the dataset name containing your BASIC program.
+  Output goes to the PY360 spool viewer.

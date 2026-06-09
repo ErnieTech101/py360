@@ -1,0 +1,29 @@
+PY360 - BROWSE HELP
+====================
+
+BROWSE displays a dataset or file in read-only mode.
+No changes can be made to the file while browsing.
+
+SCREEN LAYOUT
+-------------
+  Row 1   : Title bar - dataset name and line position
+  Row 2   : COMMAND ===> field
+  Row 3   : TOP OF DATA marker
+  Rows 4+ : Data lines with line numbers
+  Last row: Message and key reminder line
+
+NAVIGATION
+----------
+  F3 / ESC  Exit browse
+  F7 / PgUp Scroll up one page
+  F8 / PgDn Scroll down one page
+  Up/Down   Scroll one line at a time
+
+PRIMARY COMMANDS (type at COMMAND ===> then ENTER)
+--------------------------------------------------
+  TOP       Jump to top of file
+  BOTTOM    Jump to bottom of file
+  FIND str  Search for string (wraps around)
+  UP n      Scroll up n lines
+  DOWN n    Scroll down n lines
+  END       Exit browse

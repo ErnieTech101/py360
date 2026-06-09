@@ -1,0 +1,33 @@
+PY360 - HELP SYSTEM
+===================
+
+Welcome to PY360 - Python/360 MVS OS Mainframe Simulator.
+
+PY360 simulates the look and feel of an IBM MVS mainframe
+environment running on Windows 10/11.
+
+AVAILABLE HELP TOPICS
+---------------------
+  MENU      Primary option menu navigation
+  EDITOR    ISPF-style editor commands
+  BROWSE    Dataset browser commands
+  UTIL      Dataset utility functions
+  CATALOG   Dataset catalog management
+  JCL       Job Control Language basics
+  BASIC     PY360 BASIC interpreter
+  SPOOL     Spool and job output viewer
+  LOGIN     Login and user profile
+
+To display help for a specific topic, type:
+  HELP <topic>
+at any COMMAND ===> prompt, or press F1 from any screen.
+
+GENERAL NAVIGATION
+------------------
+  F1        Display context-sensitive help
+  F3        Exit current screen / save if modified
+  F4        Exit without saving
+  F7        Scroll up (Page Up)
+  F8        Scroll down (Page Down)
+  TAB       Move between fields
+  ENTER     Execute command

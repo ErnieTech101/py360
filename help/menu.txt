@@ -1,0 +1,28 @@
+PY360 - PRIMARY OPTION MENU HELP
+=================================
+
+The Primary Option Menu is the main entry point for all
+PY360 functions. Type an option number and press ENTER.
+
+MENU OPTIONS
+------------
+  1  BROWSE     Display a dataset in read-only mode
+  2  EDIT       Create or modify a dataset
+  3  UTILITIES  Dataset management functions
+  4  FOREGROUND Run a PY360 BASIC program
+  5  BATCH      Submit a job via JCL
+  6  SPOOL      View job output and spool files
+  7  STATUS     Display system status
+  X  LOGOFF     End your PY360 session
+
+NAVIGATION
+----------
+  Type the option number at OPTION ===> and press ENTER.
+  Press F3 or type X to logoff.
+  Press F1 for help on any screen.
+
+COMMAND SHORTCUTS
+-----------------
+  You may also type full commands at the OPTION prompt:
+  LOGOFF    End session
+  HELP      Display this help screen

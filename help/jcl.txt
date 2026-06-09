@@ -1,0 +1,37 @@
+PY360 - JCL HELP
+=================
+
+PY360 supports a simplified subset of IBM Job Control
+Language (JCL) for batch job submission.
+
+JCL STATEMENT TYPES
+-------------------
+  JOB     Identifies the job and its attributes
+  EXEC    Specifies the program to execute
+  DD      Defines data sets used by the program
+
+BASIC JCL EXAMPLE
+-----------------
+  //MYJOB   JOB (ACCT),'YOUR NAME',CLASS=A
+  //STEP1   EXEC PGM=BASICRUN
+  //INPUT   DD DSN=USER.DAVE.MYPROG,DISP=SHR
+  //OUTPUT  DD DSN=USER.DAVE.OUTPUT,DISP=NEW
+  //SYSOUT  DD SYSOUT=*
+
+JOB STATEMENT
+-------------
+  //jobname JOB (account),'programmer name',CLASS=x
+
+EXEC STATEMENT
+--------------
+  //stepname EXEC PGM=programname
+
+DD STATEMENT
+------------
+  //ddname DD DSN=dataset.name,DISP=disposition
+  DISP values: SHR, OLD, NEW, MOD
+
+SYSOUT
+------
+  //ddname DD SYSOUT=*
+  Routes output to the PY360 spool file.
