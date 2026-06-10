@@ -63,7 +63,7 @@ PY360 IPL sequence showing real host hardware interrogation*
 *3270-style login screen*  
 
 <img width="1149" height="703" alt="ISPS_menu" src="https://github.com/user-attachments/assets/823bde04-f830-4999-9dbd-502a3da981ea" />  
-*ISPF Primary Option Menu with system information panel* 
+*ISPF Primary Option Menu with system information panel*  
 
 <img width="1149" height="703" alt="editor" src="https://github.com/user-attachments/assets/1166d103-ce8d-41de-beef-c64ac1fad871" />  
 *ISPF-style full screen editor*  
