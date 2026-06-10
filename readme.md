@@ -1,10 +1,8 @@
-# PY/360 - Python-based MVSj IBM S/360 Mainframe Simulator
+# PY/360 - Python-based MVSj IBM S/370 Mainframe Simulator
+<img width="2816" height="1536" alt="Gemini_Generated_Image_iu07exiu07exiu07" src="https://github.com/user-attachments/assets/64011303-b453-4276-9ce5-c39122a3e1e8" /> 
 
-<img width="2816" height="1536" alt="Gemini_Generated_Image_seeeopseeeopseee" src="https://github.com/user-attachments/assets/949e2f9a-2df5-46a4-8297-8c8b3d8eff95" />   
+### PY/360 is a Python-based simulation of the IBM S/360 interactive terminal environment for Windows 10/11. It is not an emulator — it does not run real mainframe code or require mainframe software licenses. Instead, PY/360 recreates the **look, feel, and workflow** of interacting with an IBM S/360 system, making mainframe concepts accessible to anyone curious enough to try it.
 
-### PY/360 is a Python-based simulation of the IBM S/360 MVSj mainframe environment for Windows 10/11. It is not an emulator — it does not run real mainframe code or require mainframe software licenses. Instead, PY/360 recreates the **look, feel, and workflow** of interacting with an IBM *MVSj system, making mainframe concepts accessible to anyone curious enough to try it.
-
-### _What is MVSj?_
 ---
 
 ## Introduction
@@ -21,24 +19,24 @@ So why should anyone bother learning about them today? Because understanding mai
 
 ---
 
-## The Hardware of a Simple S/360 System
+## The Hardware of a Very Simple S/360 System
 
 To understand how a mainframe environment works, it helps to picture the physical hardware that made it up. At the heart of everything was the Central Processing Unit — a large cabinet-sized unit that housed the processor, main memory, and the channel controllers that managed communication with all attached devices. Unlike a modern PC where the processor does much of the I/O work itself, the S/360 offloaded input and output operations to dedicated hardware channels, freeing the CPU to focus on computation.
 
-Attached to the CPU were a carefully chosen collection of peripheral devices. Primary among them was the **DASD** — Direct Access Storage Device — the mainframe's equivalent of a hard drive, though the resemblance ends there. Early DASD units like the iconic IBM 2314 were large, washing machine-sized devices storing data on spinning magnetic disk platters. Unlike tape, DASD allowed any record to be read or written directly without reading through everything before it.
+Attached to the CPU were a carefully chosen collection of peripheral devices. Primary among them was the **DASD** — Direct Access Storage Device — the mainframe's equivalent of a hard drive, though the resemblance ends there. Early disk storage units like the iconic IBM 231 were large, washing machine-sized devices storing data on spinning magnetic disk platters. Unlike tape, a disk drive, often refered to as a Direct-Access Storage Drive (DASD) allowed any record to be read or written directly without reading through everything before it, like tape required.
 
-For output, the **IBM 1403 chain printer** was the workhorse of the data center. Capable of printing at speeds of up to 1,100 lines per minute, the 1403 produced the familiar wide greenbar paper reports that became synonymous with mainframe computing. Its distinctive chattering sound was the soundtrack of countless data centers.
+For output, the **IBM 1403 chain printer** was the output workhorse of the data center. Capable of printing at speeds of up to 1,100 lines per minute, the 1403 produced the familiar wide greenbar paper reports that became synonymous with mainframe computing. Its distinctive chattering sound was the soundtrack of countless data centers.
 
-Finally, tying the human operator to all of this machinery was the **IBM 3270 terminal** — a sleek, green-phosphor display device that connected to the mainframe over coaxial cable. The 3270 was a pure display terminal, sending keystrokes to the mainframe and receiving screen updates in return. It was through the 3270 that operators managed the system, users ran their TSO sessions, and ISPF presented its now legendary full-screen panels.
+Finally, tying the human operator to all of this machinery was the **IBM 3270 terminal** — a sleek, green-phosphor display device that connected to the mainframe over coaxial cable. The 3270 was a pure display terminal, sending keystrokes to the mainframe and receiving screen updates in return. It was through the 3270 that operators managed the system, users ran their Time-Share Option (TSO) sessions, and ISPF presented its now legendary full-screen panels.
 
-PY360 simulates all of these components in software, running entirely on a standard Windows 10/11 PC.
+PY/360 simulates these components in software, running entirely on a standard Windows 10/11 PC.
 
 ---
 
 ## Features
 
 - **Authentic 3270-style terminal** — Custom tkinter window with green phosphor display, OIA status line, and period-correct fonts
-- **IPL boot sequence** — Type `IPL` to initiate system startup with real host hardware interrogation via psutil and WMI
+- **IPL boot sequence** — Type `IPL 201` to initiate system startup with real host hardware interrogation via Python's psutil and WMI packages
 - **TSO/ISPF simulation** — Full primary option menu with system information panel
 - **ISPF-style editor** — Full screen editor with line commands (D, I, R, C, M, A, B) and primary commands (FIND, CHANGE, SAVE)
 - **ISPF browse** — Read-only dataset viewer with search and scroll
@@ -74,7 +72,7 @@ PY360 simulates all of these components in software, running entirely on a stand
 
 ## Requirements
 
-- Windows 10 or Windows 11
+- Windows 10 or Windows 11 (Sorry, no Linux for now)
 - Python 3.10 or higher
 - The following Python packages (see `requirements.txt`):
 
@@ -88,7 +86,7 @@ windows-curses
 
 ## Installation
 
-1. **Clone the repository:** - Or just download the .zip file
+1. **Clone the repository:** - Or just download the .zip file and unpack it anywhere you want
 ```
 git clone https://github.com/ErnieTech101/py360.git
 cd py360
@@ -104,7 +102,7 @@ pip install -r requirements.txt
 python py360.py
 ```
 
-That's it! On first run PY360 will automatically create all required directories, install the sample library, and initialize the catalog. No additional configuration is needed.
+That's it! On first run PY/360 will automatically create all required directories, install the sample library, and initialize the catalog. No additional configuration is needed.
 
 ---
 
@@ -215,7 +213,7 @@ py360/
 
 ## REXX Language Support
 
-PY360 includes a REXX interpreter supporting:
+PY/360 includes a REXX interpreter supporting:
 
 | Feature | Details |
 |---------|---------|
