@@ -18,6 +18,7 @@ The architecture reflects that purpose in some fascinating ways. Rather than ser
 So why should anyone bother learning about them today? Because understanding mainframes gives you a genuine appreciation for how enterprise computing actually works under the hood. Concepts like batch job processing, spooled printer output, dataset management, and job control language were all mainframe innovations that shaped the computing world we live in. PY360 is a lighthearted attempt to bring that experience to anyone curious enough to try it — Big Iron from the comfort of your own desk.
 
 ---
+<img width="1003" height="549" alt="Screenshot 2026-06-09 235534" src="https://github.com/user-attachments/assets/14e0a2da-aab6-4900-9409-07d3373e4c95" />
 
 ## The Hardware of a Very Simple S/360 System
 
