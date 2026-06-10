@@ -1,6 +1,6 @@
 # PY/360 - Python-based MVSj IBM S/360 Mainframe Simulator
 
-![PY360 Logo Screen](screenshots/logo.png)
+<img width="1149" height="703" alt="logon" src="https://github.com/user-attachments/assets/b30fa219-4e1d-4e4d-aade-1bffb8d09ffb" />
 
 > *"Because some of us remember our days with Heavy Iron"*
 
