@@ -1,7 +1,7 @@
-# PY/360 - Python-based MVSj IBM S/370 Mainframe Simulator
+# PY/360 - Python-based S/360 Mainframe Simulator
 <img width="2816" height="1536" alt="Gemini_Generated_Image_iu07exiu07exiu07" src="https://github.com/user-attachments/assets/64011303-b453-4276-9ce5-c39122a3e1e8" /> 
 
-### PY/360 is a Python-based simulation of the IBM S/360 interactive terminal environment for Windows 10/11. It is not an emulator — it does not run real mainframe code or require mainframe software licenses. Instead, PY/360 recreates the **look, feel, and workflow** of interacting with an IBM S/360 system, making mainframe concepts accessible to anyone curious enough to try it.
+### PY/360 is a Python-based simulation of the IBM S/360 interactive terminal environment for Windows 10/11. It is not an emulator — it does not run real mainframe code or require mainframe software licenses. Instead, PY/360 recreates the **look, feel, and workflow** of interacting with an IBM S/360 system, making mainframe concepts accessible to anyone curious enough to try it. PY/360's OS was created in the spirit of MVT but single-user. So we'll call it SVT.
 
 ---
 
