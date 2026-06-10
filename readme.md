@@ -20,6 +20,14 @@ So why should anyone bother learning about them today? Because understanding mai
 ---
 <img width="1003" height="549" alt="Screenshot 2026-06-09 235534" src="https://github.com/user-attachments/assets/14e0a2da-aab6-4900-9409-07d3373e4c95" />
 
+## Some Key Concepts Before You Get Started
+
+MFT Operating System (Multiprogramming with a Fixed number of Tasks): This was a variant of OS/360 designed for smaller System/360 models. It divided memory into fixed-size partitions, allowing several programs to reside in memory simultaneously. Historical guides detail MFT configuration and how operators managed jobs and I/O within these environments.  PY/360's look and feel is based on it's reduced feature-set of MFT.
+
+TSO (Time Sharing Option): Using 3270-type CRT terminals, this became the standard interactive facility for IBM mainframes. It functions similarly to a command-line interface and can use ISPF menus, allowing users to interact with the system in real-time rather than purely through batch processing.  
+
+ISPF (Interactive System Productivity Facility): Although text-based, this is similar to a PC's "graphical UI," ISPF is a menu-based environment built on top of TSO. It includes essential tools such as a text editor, file browsers, and utilities for allocating data sets. It's roots lie in enhancing productivity for system programmers and developers on older mainframe architectures.  
+
 ## The Hardware of a Very Simple S/360 System
 
 To understand how a mainframe environment works, it helps to picture the physical hardware that made it up. At the heart of everything was the Central Processing Unit — a large cabinet-sized unit that housed the processor, main memory, and the channel controllers that managed communication with all attached devices. Unlike a modern PC where the processor does much of the I/O work itself, the S/360 offloaded input and output operations to dedicated hardware channels, freeing the CPU to focus on computation.
