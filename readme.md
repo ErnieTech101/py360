@@ -1,7 +1,6 @@
 # PY/360 - Python-based MVSj IBM S/360 Mainframe Simulator
 
-<img width="1149" height="703" alt="logon" src="https://github.com/user-attachments/assets/b30fa219-4e1d-4e4d-aade-1bffb8d09ffb" />
-
+<img width="2816" height="1536" alt="Gemini_Generated_Image_seeeopseeeopseee" src="https://github.com/user-attachments/assets/949e2f9a-2df5-46a4-8297-8c8b3d8eff95" />
 > *"Because some of us remember our days with Heavy Iron"*
 
 PY360 is a Python-based simulation of the IBM S/360 MVSj mainframe environment for Windows 10/11. It is not an emulator — it does not run real mainframe code or require mainframe software licenses. Instead, PY360 recreates the **look, feel, and workflow** of working on an IBM MVS system, making mainframe concepts accessible to anyone curious enough to try it.
