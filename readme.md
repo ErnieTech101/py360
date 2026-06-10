@@ -59,16 +59,16 @@ PY360 simulates all of these components in software, running entirely on a stand
 <img width="1201" height="762" alt="IPL" src="https://github.com/user-attachments/assets/42c3a724-6893-4051-adb3-3e25707c6f28" />
 PY360 IPL sequence showing real host hardware interrogation*  
 
-<img width="1149" height="703" alt="logon" src="https://github.com/user-attachments/assets/2981f17c-1752-490d-8cea-8539f267a53c" />
+<img width="1149" height="703" alt="logon" src="https://github.com/user-attachments/assets/2981f17c-1752-490d-8cea-8539f267a53c" />  
 *3270-style login screen*  
 
-<img width="914" height="562" alt="ISPS_menu" src="https://github.com/user-attachments/assets/823bde04-f830-4999-9dbd-502a3da981ea" />
+<img width="1149" height="703" alt="ISPS_menu" src="https://github.com/user-attachments/assets/823bde04-f830-4999-9dbd-502a3da981ea" />  
 *ISPF Primary Option Menu with system information panel* 
 
-<img width="1146" height="705" alt="editor" src="https://github.com/user-attachments/assets/1166d103-ce8d-41de-beef-c64ac1fad871" />
+<img width="1149" height="703" alt="editor" src="https://github.com/user-attachments/assets/1166d103-ce8d-41de-beef-c64ac1fad871" />  
 *ISPF-style full screen editor*  
 
-<img width="912" height="558" alt="spool_prt_out" src="https://github.com/user-attachments/assets/5d5ef3f4-7378-4e15-8ecd-f9efda4cfea6" />
+<img width="1149" height="703" alt="spool_prt_out" src="https://github.com/user-attachments/assets/5d5ef3f4-7378-4e15-8ecd-f9efda4cfea6" />  
 *1403 printer spool output viewer*  
 
 ---
