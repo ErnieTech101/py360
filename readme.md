@@ -9,6 +9,8 @@ It is not an emulator — it does not run real mainframe code or require mainfra
 
 For IBM mainframe historians, the MFT OS was made available for the S/360 in 1967 and the TSO was introduced in 1971. ISPF was not actually available for the S/360 system and didn't appear until the late 1970's for the S/370 and later mainframes. PY/360 introduces its custom built version of ISPF as a training tool for the simulated S/360 environment.
 
+PY/360 builds it simulation around four essential IBM system components - A System 360 Model 40 CPU, 
+
 ---
 
 ## Introduction
