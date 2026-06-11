@@ -3,11 +3,11 @@
 
 ## What it is:
 
-PY/360 is a Python-based simulation of the IBM S/360 mainframe specially redesigned to support simulation of a single-user instance of the Multiprogramming with a Variable number of Tasks operating system (MVT) with Time Sharing Option (TSO) - with the addition of the Interactive System Productivity Facility ISPF-type inteface for Windows 10/11.  
+PY/360 is a Python-based simulation of the IBM S/360 mainframe specially redesigned to support simulation of a single-user instance of the Multiprogramming with a Fixed number of Tasks operating system (MFT) with Time Sharing Option (TSO) - with the addition of the Interactive System Productivity Facility ISPF-type inteface for Windows 10/11.  
 
 It is not an emulator — it does not run real mainframe code or require mainframe software licenses. Instead, PY/360 recreates the **look, feel, and workflow** of interacting with a small hypothetical mainframe sysplex making legacy IBM 'Big Iron' concepts accessible to anyone curious enough to try it.  
 
-For IBM mainframe historians, the MVT OS was made available for the S/360 in 1967 and the TSO was introduced in 1971. ISPF was not actually available for the S/360 system and didn't appear until the late 1970's for the S/370 and later mainframes. PY/360 introduces its version of ISPF as a training tool for the simulated S/360 environment.
+For IBM mainframe historians, the MFT OS was made available for the S/360 in 1967 and the TSO was introduced in 1971. ISPF was not actually available for the S/360 system and didn't appear until the late 1970's for the S/370 and later mainframes. PY/360 introduces its custom built version of ISPF as a training tool for the simulated S/360 environment.
 
 ---
 
@@ -31,7 +31,7 @@ MFT Operating System (Multiprogramming with a Fixed number of Tasks): This was a
 
 TSO (Time Sharing Option): Using 3270-type CRT terminals, this became the standard interactive facility for IBM mainframes. It functions similarly to a command-line interface and can use ISPF menus, allowing users to interact with the system in real-time rather than purely through batch processing.  
 
-ISPF (Interactive System Productivity Facility): Although text-based, this is similar to a PC's "graphical UI," ISPF is a menu-based environment built on top of TSO. It includes essential tools such as a text editor, file browsers, and utilities for allocating data sets. It's roots lie in enhancing productivity for system programmers and developers on older mainframe architectures.  
+ISPF (Interactive System Productivity Facility): Although text-based, this is similar to a PC's "graphical UI," ISPF is a menu-based environment built on top of TSO. It includes essential tools such as a text editor, file browsers, and utilities for allocating data sets. It's roots lie in enhancing productivity for system programmers and developers on older mainframe architectures. While ISPF was not available in the real S/360 environment, we include a custom version in PY/360 for ease of use and training.
 
 <img width="1003" height="549" alt="Screenshot 2026-06-09 235534" src="https://github.com/user-attachments/assets/14e0a2da-aab6-4900-9409-07d3373e4c95" />  
 
