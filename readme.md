@@ -15,15 +15,13 @@ For IBM mainframe historians, the MVT OS was made available for the S/360 in 196
 
 If you’ve ever used an ATM or booked a flight, you’ve relied on a mainframe. Pioneered in 1964 with the IBM System/360, these machines quietly run the world’s most critical infrastructure due to their unmatched reliability and ability to handle massive data volumes.
 
-The System/360 revolutionized the industry by introducing a unified, compatible architecture—a legacy that continues today with the IBM Z series. Unlike supercomputers (built for raw speed) or PCs (built for personal productivity), mainframes occupy a unique middle ground engineered specifically for throughput and stability.
+The System/360 revolutionized the industry by introducing a forward-compatible computer system architecture that continues today with the IBM Z series. Unlike supercomputers (built for raw speed) or PCs (built for personal productivity), mainframes occupy a unique middle ground engineered specifically for throughput and stability.
 
 Their architecture shares resources across thousands of simultaneous users through two core methods:
-
 Time-sharing: Allowing multiple users to interact with the system simultaneously via terminals.
-
 Batch job processing: Managing queued tasks in an orderly sequence using Job Control Language (JCL) and routing output to a managed spool.
 
-Understanding mainframes offers key insights into the foundations of enterprise computing. PY360 is a lighthearted project designed to let you explore these concepts and experience classic "Big Iron" computing right from your desk.
+Understanding mainframes offers key insights into the foundations of enterprise computing. PY/360 is an easy to use simulator designed to let you explore these concepts and experience classic "Big Iron" computing right from your desk.
 
 ---
 
