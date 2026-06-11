@@ -13,18 +13,19 @@ For IBM mainframe historians, the MVT OS was made available for the S/360 in 196
 
 ## Introduction
 
-If you've ever used an ATM, booked a flight, or paid a bill online, you've almost certainly interacted with a mainframe computer without knowing it. These remarkable machines, pioneered by IBM with the legendary System/360 back in 1964, have been quietly running much of the world's most critical computing for over sixty years. Banks, airlines, insurance companies, and governments all rely on them because mainframes do one thing better than anything else ever built — they handle enormous volumes of data with rock solid reliability, day in and day out, year after year. They're not glamorous, they don't make headlines, but when a mainframe goes down, the world notices.
+If you’ve ever used an ATM or booked a flight, you’ve relied on a mainframe. Pioneered in 1964 with the IBM System/360, these machines quietly run the world’s most critical infrastructure due to their unmatched reliability and ability to handle massive data volumes.
 
-The IBM System/360 was a genuinely revolutionary design. Before it arrived, computers were largely one-off creations — each model incompatible with the next, programs written for one machine useless on another. IBM changed all of that with a single bold stroke, introducing a complete family of compatible computers ranging from small business machines to room-sized giants, all sharing the same instruction set and architecture. It was a concept so successful that its direct descendants, the System/370, System/390, and today's IBM Z series, are still running in data centers around the world.
+The System/360 revolutionized the industry by introducing a unified, compatible architecture—a legacy that continues today with the IBM Z series. Unlike supercomputers (built for raw speed) or PCs (built for personal productivity), mainframes occupy a unique middle ground engineered specifically for throughput and stability.
 
-What made the S/360 and its successors truly special wasn't raw speed — that's the domain of supercomputers, which are optimized for pure number crunching in scientific and engineering applications. And it wasn't personal productivity, which is what your laptop and desktop PC are designed for. The mainframe occupied a unique middle ground, engineered specifically for reliability, throughput, and the simultaneous management of enormous amounts of structured data.
+Their architecture shares resources across thousands of simultaneous users through two core methods:
 
-The architecture reflects that purpose in some fascinating ways. Rather than serving one user doing one thing at a time like a personal computer, a mainframe was designed from the start to share its resources across hundreds or even thousands of simultaneous users and processes. This happened in two complementary ways. Time-sharing allowed multiple users sitting at terminals — those iconic green-screen IBM 3270 displays — to interact with the system simultaneously, each getting a slice of the processor's attention so quickly that it felt like they had the machine to themselves. At the same time, batch job processing allowed work to be submitted as formal jobs written in Job Control Language, or JCL, queued up by the Job Entry Subsystem, and executed in an orderly, managed sequence. Output from those jobs was routed to a spool, a managed queue of printer and output data that could be reviewed, reprinted, or archived. That combination of interactive time-sharing and disciplined batch processing remains the heartbeat of mainframe computing to this day.
+Time-sharing: Allowing multiple users to interact with the system simultaneously via terminals.
 
-So why should anyone bother learning about them today? Because understanding mainframes gives you a genuine appreciation for how enterprise computing actually works under the hood. Concepts like batch job processing, spooled printer output, dataset management, and job control language were all mainframe innovations that shaped the computing world we live in. PY360 is a lighthearted attempt to bring that experience to anyone curious enough to try it — Big Iron from the comfort of your own desk.
+Batch job processing: Managing queued tasks in an orderly sequence using Job Control Language (JCL) and routing output to a managed spool.
+
+Understanding mainframes offers key insights into the foundations of enterprise computing. PY360 is a lighthearted project designed to let you explore these concepts and experience classic "Big Iron" computing right from your desk.
 
 ---
-
 
 ## Some Key Concepts Before You Get Started
 
