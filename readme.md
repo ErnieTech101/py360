@@ -3,11 +3,11 @@
 
 ## What it is:
 
-PY/360 is a Python-based simulation of the IBM S/360 mainframe specially redesigned to support simulation of a single-user instance of the Multiprogramming with a Fixed number of Tasks operating system (MFT) with Time Sharing Option (TSO) - with the addition of the Interactive System Productivity Facility ISPF-type inteface for Windows 10/11.  
+PY/360 is a Python-based simulation of the IBM S/360 mainframe specially redesigned to support simulation of a single-user instance of the Multiprogramming with a Variable number of Tasks operating system (MVT) with Time Sharing Option (TSO) - with the addition of the Interactive System Productivity Facility ISPF-type inteface for Windows 10/11.  
 
 It is not an emulator — it does not run real mainframe code or require mainframe software licenses. Instead, PY/360 recreates the **look, feel, and workflow** of interacting with a small hypothetical mainframe sysplex making legacy IBM 'Big Iron' concepts accessible to anyone curious enough to try it.  
 
-For IBM mainframe historians, the MFT OS was made available for the S/360 in 1967 and the TSO was introduced in 1971. ISPF was not actually available for the S/360 system and didn't appear until the late 1970's for the S/370 and later mainframes. PY/360 introduces its custom built version of ISPF as a training tool for the simulated S/360 environment.
+For IBM mainframe historians, the MVT OS was made available for the S/360 in 1967 and the TSO was introduced in 1971. ISPF was not actually available for the S/360 system and didn't appear until the late 1970's for the S/370 and later mainframes. PY/360 introduces its custom built version of ISPF as a training tool for the simulated S/360 environment.
 
 PY/360 builds it simulation around four essential IBM system components - A System 360 Model 40 CPU, 
 
@@ -29,9 +29,9 @@ Understanding mainframes offers key insights into the foundations of enterprise 
 
 ## Some Key Concepts Before You Get Started
 
-MFT Operating System (Multiprogramming with a Fixed number of Tasks): This was a variant of OS/360 designed for smaller System/360 models. It divided memory into fixed-size partitions, allowing several programs to reside in memory simultaneously. Historical guides detail MFT configuration and how operators managed jobs and I/O within these environments.  PY/360's look and feel is based on it's reduced feature-set of MFT.
+MVT Operating System (Multiprogramming with a Variable number of Tasks): This was a variant of OS/360 designed for smaller System/360 models. It divided memory into fixed-size partitions, allowing several programs to reside in memory simultaneously. Historical guides detail MVT configuration and how operators managed jobs and I/O within these environments.  PY/360's look and feel is based on it's reduced feature-set of MVT.
 
-TSO (Time Sharing Option): Using 3270-type CRT terminals, this became the standard interactive facility for IBM mainframes. It functions similarly to a command-line interface and can use ISPF menus, allowing users to interact with the system in real-time rather than purely through batch processing.  
+TSO (Time Sharing Option): Using 3270-type CRT terminals, this became the standard interactive facility for IBM mainframes. It functions similarly to a command-line interface and can use ISPF menus, allowing users to interact with the system in real-time rather than purely through batch processing.  PY/360 has a built-in 3270 Model 2 80X24 green screen terminal.
 
 ISPF (Interactive System Productivity Facility): Although text-based, this is similar to a PC's "graphical UI," ISPF is a menu-based environment built on top of TSO. It includes essential tools such as a text editor, file browsers, and utilities for allocating data sets. It's roots lie in enhancing productivity for system programmers and developers on older mainframe architectures. While ISPF was not available in the real S/360 environment, we include a custom version in PY/360 for ease of use and training.
 
